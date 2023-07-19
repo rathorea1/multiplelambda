@@ -65,6 +65,7 @@ pipeline {
       }
 
       steps {
+	sh 'cd HelloWorldJava'
         sh 'venv/bin/sam build --template ${SAM_TEMPLATE} --use-container'
         withAWS(
             credentials: env.PIPELINE_USER_CREDENTIAL_ID,
