@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     PIPELINE_USER_CREDENTIAL_ID = 'aws-access'
-    SAM_TEMPLATE = 'template.yaml'
+    SAM_TEMPLATE = 'HelloWorldJava/template.yaml'
     MAIN_BRANCH = 'master'
 
     TESTING_STACK_NAME = 'sam-test'
