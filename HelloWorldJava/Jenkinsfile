@@ -27,11 +27,12 @@ pipeline {
     //   }
     // }
 
-   // stage('Prepare Build Environment') {
-    //    steps {
-   //     }
-   // }
-
+    stage('Prepare Build Environment') {
+        steps {
+                sh 'python3 -m venv venv && venv/bin/pip install --upgrade pip && venv/bin/pip install aws-sam-cli'
+                stash includes: '**/venv/**/*', name: 'venv'
+        }
+    }
   //  stage('build-and-deploy-feature') {
       // this stage is triggered only for feature branches (feature*),
       // which will build the stack and deploy to a stack named with branch name.
