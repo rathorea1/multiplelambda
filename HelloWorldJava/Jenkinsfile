@@ -1,0 +1,8 @@
+library identifier: 'ql-eks-ci-jenkins-lib@TRO-3741', retriever: modernSCM(
+        [$class       : 'GitSCMSource',
+         remote       : 'https://tools.standardbank.co.za/bitbucket/scm/qutr/ql-eks-ci-jenkins-lib.git',
+         credentialsId: 'jenkins-bitbucket-https'])
+
+qlLambdaFuctionPipeline(
+	samImage: "public.ecr.aws/sam/build-java17:1.89.0"
+)
