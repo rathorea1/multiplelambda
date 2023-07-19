@@ -27,12 +27,10 @@ pipeline {
     //   }
     // }
 
-    stage('Prepare Build Environment') {
-        steps {
-		sh	 '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
-		sh 'brew install aws-sam-cli'
-        }
-    }
+   // stage('Prepare Build Environment') {
+    //    steps {
+   //     }
+   // }
 
   //  stage('build-and-deploy-feature') {
       // this stage is triggered only for feature branches (feature*),
